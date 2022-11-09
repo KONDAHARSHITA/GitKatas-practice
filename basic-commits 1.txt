@@ -1,0 +1,111 @@
+Harshita@DESKTOP-3OFEE2E MINGW64 ~
+$ cd Zemoso-internship
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship
+$ cd git-katas
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas (3-way-merge)
+$ git clone https://github.com/KONDAHARSHITA/git-practice.git
+Cloning into 'git-practice'...
+warning: You appear to have cloned an empty repository.
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas (3-way-merge)
+$ git clone https://github.com/eficode-academy/git-katas.git
+Cloning into 'git-katas'...
+remote: Enumerating objects: 2433, done.
+remote: Counting objects: 100% (1102/1102), done.
+remote: Compressing objects: 100% (463/463), done.
+remote: Total 2433 (delta 697), reused 663 (delta 639), pack-reused 1331
+Receiving objects: 100% (2433/2433), 2.46 MiB | 5.92 MiB/s, done.
+Resolving deltas: 100% (1045/1045), done.
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas (3-way-merge)
+$ cd basic-commits
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits (3-way-merge)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Harshita/Zemoso-internship/git-katas/basic-commits/exercise/.git/
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ touch file.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git add file.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git commit -m "first commit"
+[master (root-commit) ee421db] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ echo "hello" > file.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ echo "changed" > file.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git commit -m "second commit"
+[master cd889e7] second commit
+ 1 file changed, 1 insertion(+)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$ git commit -m"third commit"
+[master c03b4b4] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/basic-commits/exercise (master)
+$
