@@ -1,0 +1,63 @@
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas (3-way-merge)
+$ cd 3-way-merge
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge (3-way-merge)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Harshita/Zemoso-internship/git-katas/3-way-merge/exercise/.git/
+[master (root-commit) 57765bf] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master 269903e] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ git branch greeting
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ git switch greeting
+Switched to branch 'greeting'
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (greeting)
+$ echo "hello world" > greeting.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (greeting)
+$ git add greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (greeting)
+$ git commit -m "3way merge"
+[greeting 5d268ea] 3way merge
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (greeting)
+$ git switch master
+Switched to branch 'master'
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ touch README.md
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ echo "this is readme file" > README.md
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$ git commit -m "readme file"
+Merge made by the 'ort' strategy.
+ greeting.txt | 2 +-nsertion(+)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)$ git log --oneline --graph --all
+*   5b6fce4 (HEAD -> master) Merge branch 'greeting' :x
+|\
+| * 5d268ea (greeting) 3way merge
+* | 4a5e833 readme file
+|/
+* 269903e Add content to greeting.txt
+* 57765bf Add file greeting.txt
+
+Harshita@DESKTOP-3OFEE2E MINGW64 ~/Zemoso-internship/git-katas/3-way-merge/exercise (master)
+$
